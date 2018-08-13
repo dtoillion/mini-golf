@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b50c44cfa5a1d4aad8c6e8345bbe0e38
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Look Sir, Droids
+  fontNames:
+  - Look Sir, Droids
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0acd59d024d3b4a71af88ad659e62740, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
