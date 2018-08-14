@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GolfBall : MonoBehaviour {
 
+  public float ForcePower = 10f;
+
   private Rigidbody rb;
   private Vector3 startPosition;
   private Vector3 stopPosition;
@@ -23,12 +25,12 @@ public class GolfBall : MonoBehaviour {
   void OnMouseUp ()
   {
     stopPosition = Input.mousePosition;
+    Debug.Log(stopPosition);
 
-    aimDirection = startPosition - stopPosition;
-    aimDirection.Normalize();
-    rb.AddForce(aimDirection * 100f);
+    aimDirection = new Vector3(startPosition.x - stopPosition.x, 0, startPosition.y - stopPosition.y);
 
-    Debug.Log(aimDirection);
+    Debug.Log("Force to ball:" + aimDirection * ForcePower);
+    rb.AddForce(aimDirection.x * ForcePower, 0, aimDirection.z * ForcePower);
   }
 
 }
