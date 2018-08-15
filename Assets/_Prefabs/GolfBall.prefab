@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157612057416812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38235f4c0af545be85d013546291e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForcePower: 10
+  ForcePower: 15
   BallAudioClips:
   - {fileID: 8300000, guid: e5ccc7779f8f04c209a635e8630cb5dc, type: 3}
   - {fileID: 8300000, guid: ee2edbed81fc0496e931038e7a25d3c3, type: 3}

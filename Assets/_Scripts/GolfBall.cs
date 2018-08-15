@@ -20,8 +20,11 @@ public class GolfBall : MonoBehaviour {
 	}
 
   void OnCollisionEnter(Collision col) {
-    BallAudio.clip = BallAudioClips[2];
-    BallAudio.Play();
+    if((rb.velocity.x >= 0.3f) || (rb.velocity.y >= 0.3f) || (rb.velocity.z >= 0.3f)) {
+      BallAudio.clip = BallAudioClips[2];
+      if(!BallAudio.isPlaying)
+        BallAudio.Play();
+    }
   }
 
   void OnMouseDown ()

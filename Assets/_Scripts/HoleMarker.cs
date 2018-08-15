@@ -5,39 +5,38 @@ using UnityEngine;
 
 public class HoleMarker : MonoBehaviour {
 
-  public Text CountDownText;
-  private bool BallInCup = false;
   private AudioSource CupAudio;
 
   void Start () {
-    CountDownText.text = "";
+    GameController.control.NotificationText.text = "";
     CupAudio = GetComponent<AudioSource>();
   }
 
   void OnTriggerEnter(Collider c) {
     if(c.gameObject.tag == "GolfBall") {
-      BallInCup = true;
       StartCoroutine("CountDown");
     }
   }
 
   void OnTriggerExit(Collider c) {
     if(c.gameObject.tag == "GolfBall") {
-      BallInCup = false;
       StopCoroutine("CountDown");
-      CountDownText.text = "";
+      GameController.control.NotificationText.text = "";
     }
   }
 
   IEnumerator CountDown() {
     yield return new WaitForSeconds(1f);
-    CountDownText.text = "3";
+    GameController.control.NotificationText.text = "3";
     yield return new WaitForSeconds(1f);
-    CountDownText.text = "2";
+    GameController.control.NotificationText.text = "2";
     yield return new WaitForSeconds(1f);
-    CountDownText.text = "1";
+    GameController.control.NotificationText.text = "1";
     yield return new WaitForSeconds(1f);
-    CountDownText.text = "Ball In!";
+    GameController.control.NotificationText.text = "Ball In!";
     CupAudio.Play();
+    yield return new WaitForSeconds(1f);
+    GameController.control.SetUpCourse();
+
   }
 }
