@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
   private Vector3 SpawnPosition;
 
   public GameObject[] Holes;
-  private GameObject ExistingHole;
+  private GameObject ObjectToDelete;
   private Vector3 HolePosition;
 
   public int HoleCount;
@@ -46,10 +46,10 @@ public class GameController : MonoBehaviour {
 
   public void SetUpCourse () {
     // Destroy existing ball and hole
-    ExistingHole = GameObject.FindWithTag("GolfBall");
-    Destroy(ExistingHole);
-    ExistingHole = GameObject.FindWithTag("Hole");
-    Destroy(ExistingHole);
+    ObjectToDelete = GameObject.FindWithTag("GolfBall");
+    Destroy(ObjectToDelete);
+    ObjectToDelete = GameObject.FindWithTag("Hole");
+    Destroy(ObjectToDelete);
 
     // Increase the hole count and update the text
     HoleCount += 1;
@@ -61,6 +61,8 @@ public class GameController : MonoBehaviour {
   }
 
   public void ResetBall () {
+    ObjectToDelete = GameObject.FindWithTag("GolfBall");
+    Destroy(ObjectToDelete);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 

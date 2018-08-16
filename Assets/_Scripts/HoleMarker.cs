@@ -26,17 +26,19 @@ public class HoleMarker : MonoBehaviour {
   }
 
   IEnumerator CountDown() {
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.5f);
     GameController.control.NotificationText.text = "3";
-    yield return new WaitForSeconds(1f);
-    GameController.control.NotificationText.text = "2";
-    yield return new WaitForSeconds(1f);
-    GameController.control.NotificationText.text = "1";
-    yield return new WaitForSeconds(1f);
-    GameController.control.NotificationText.text = "Ball In!";
     CupAudio.Play();
+    yield return new WaitForSeconds(0.5f);
+    GameController.control.NotificationText.text = "2";
+    yield return new WaitForSeconds(0.5f);
+    GameController.control.NotificationText.text = "1";
+    yield return new WaitForSeconds(0.5f);
+    GameController.control.NotificationText.text = "Ball In!";
     yield return new WaitForSeconds(1f);
+
     GameController.control.SetUpCourse();
 
   }
+
 }
