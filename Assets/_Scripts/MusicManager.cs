@@ -7,24 +7,19 @@ public class MusicManager : MonoBehaviour {
 	AudioSource backgroundMusic;
 	private int i;
 
-	void Awake ()
-	{
+	void Awake() {
 		backgroundMusic = GetComponent <AudioSource> ();
 	}
 
-	void Start ()
-	{
+	void Start() {
 		i = UnityEngine.Random.Range(0,musicbg.Length);
 		StartCoroutine("Playlist");
 	}
 
-	IEnumerator Playlist()
-	{
-		while(true)
-		{
+	IEnumerator Playlist() {
+		while(true) {
 			yield return new WaitForSeconds(1.0f);
-			if(!backgroundMusic.isPlaying)
-			{
+			if(!backgroundMusic.isPlaying) {
 				if(i != (musicbg.Length -1)) {
 					i++;
 					backgroundMusic.clip = musicbg[i];

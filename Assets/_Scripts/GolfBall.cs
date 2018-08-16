@@ -13,8 +13,7 @@ public class GolfBall : MonoBehaviour {
   private Vector3 stopPosition;
   private Vector3 aimDirection;
 
-	void Awake ()
-  {
+	void Awake() {
     rb = GetComponent<Rigidbody>();
     BallAudio = GetComponent<AudioSource>();
 	}
@@ -25,8 +24,7 @@ public class GolfBall : MonoBehaviour {
       BallAudio.Play();
   }
 
-  void OnMouseDown ()
-  {
+  void OnMouseDown() {
     startPosition = Input.mousePosition;
     Debug.Log(startPosition);
 
@@ -34,8 +32,7 @@ public class GolfBall : MonoBehaviour {
     BallAudio.Play();
   }
 
-  void OnMouseUp ()
-  {
+  void OnMouseUp() {
     stopPosition = Input.mousePosition;
     Debug.Log(stopPosition);
 

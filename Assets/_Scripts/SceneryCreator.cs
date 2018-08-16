@@ -7,7 +7,7 @@ public class SceneryCreator : MonoBehaviour {
   public GameObject[] Scenery;
   private Vector3 SpawnPosition;
 
-	void Start () {
+	void Start() {
     SpawnPosition = transform.position;
     Instantiate(Scenery[Random.Range(0, Scenery.Length)], SpawnPosition, Quaternion.identity);
   }

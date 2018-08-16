@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dbd41acbf3e214a4c95937087d4350fc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hand Drawn Shapes
+  fontNames:
+  - Hand Drawn Shapes
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 23baa8b5a122f439ca5322ba2a9386c6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

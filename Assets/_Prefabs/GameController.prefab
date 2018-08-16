@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1462286086994314
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,10 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicbg:
-  - {fileID: 8300000, guid: 0edfdd57b81e64bf0b54bc0a17a1e73d, type: 3}
   - {fileID: 8300000, guid: dc00a14faccfc4cefb1cda77dd6f2421, type: 3}
-  - {fileID: 8300000, guid: 6d9965d70dae844c083d34958aec788c, type: 3}
-  - {fileID: 8300000, guid: 2ca3217a5b0174730a7b2a9d8d8292c1, type: 3}
 --- !u!114 &114146482537585946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa6ccb69e16e4a1c8260700096af6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GolfBall: {fileID: 1157612057416812, guid: 28701127c53594f57b729b8ad141dbe0, type: 2}
+  GolfBall: {fileID: 1785308795332792, guid: a2deb996ab1dd4b53a79298519bf59d0, type: 2}
   Holes:
   - {fileID: 1325748905120402, guid: 3c9506ba977c34adb893fd3b2770e69f, type: 2}
   - {fileID: 1979151869826350, guid: aed0655fa1e754436845371c2f0b748a, type: 2}

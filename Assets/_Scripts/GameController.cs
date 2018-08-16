@@ -23,14 +23,14 @@ public class GameController : MonoBehaviour {
   public float StrokeCount;
   public Text StrokeCountText;
 
-  void Awake () {
+  void Awake() {
     if (control == null)
       control = this;
     else if (control != this)
       Destroy(gameObject);
   }
 
-	void Start () {
+	void Start() {
     HoleCount = 0;
     HoleCountText.text = "Hole: " + (HoleCount + 1);
 
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
-  public void SetUpCourse () {
+  public void SetUpCourse() {
     // Destroy existing ball and hole
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
@@ -60,13 +60,13 @@ public class GameController : MonoBehaviour {
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
-  public void ResetBall () {
+  public void ResetBall() {
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
-  public void ResetGame () {
+  public void ResetGame() {
     SceneManager.LoadScene("Course 01");
   }
 

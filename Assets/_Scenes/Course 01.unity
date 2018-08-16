@@ -121,11 +121,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114068731531346036, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: musicbg.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4145629573496238, guid: ec82beab168914c4cb88829711733fde, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -158,32 +153,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114068731531346036, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: musicbg.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: dc00a14faccfc4cefb1cda77dd6f2421, type: 3}
-    - target: {fileID: 114068731531346036, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: musicbg.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: dc00a14faccfc4cefb1cda77dd6f2421, type: 3}
-    - target: {fileID: 114068731531346036, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: musicbg.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6d9965d70dae844c083d34958aec788c, type: 3}
-    - target: {fileID: 114068731531346036, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: musicbg.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2ca3217a5b0174730a7b2a9d8d8292c1, type: 3}
-    - target: {fileID: 114191767295689206, guid: ec82beab168914c4cb88829711733fde,
-        type: 2}
-      propertyPath: GolfBall
-      value: 
-      objectReference: {fileID: 1785308795332792, guid: a2deb996ab1dd4b53a79298519bf59d0,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec82beab168914c4cb88829711733fde, type: 2}
   m_IsPrefabAsset: 0
