@@ -7,6 +7,7 @@ public class GolfBall : MonoBehaviour {
   public float ForcePower = 10f;
   public AudioClip[] BallAudioClips;
 
+  private Light GolfBallLight;
   private AudioSource BallAudio;
   private Rigidbody rb;
   private Vector3 startPosition;
@@ -16,6 +17,7 @@ public class GolfBall : MonoBehaviour {
 	void Awake() {
     rb = GetComponent<Rigidbody>();
     BallAudio = GetComponent<AudioSource>();
+    GolfBallLight = GetComponent<Light>();
 	}
 
   void Update() {
@@ -34,6 +36,9 @@ public class GolfBall : MonoBehaviour {
     startPosition = Input.mousePosition;
     Debug.Log(startPosition);
 
+    Debug.Log(GolfBallLight);
+    GolfBallLight.intensity = 3f;
+
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
   }
@@ -41,6 +46,8 @@ public class GolfBall : MonoBehaviour {
   void OnMouseUp() {
     stopPosition = Input.mousePosition;
     Debug.Log(stopPosition);
+
+    GolfBallLight.intensity = 4f;
 
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();
