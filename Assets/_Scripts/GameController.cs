@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
   public static GameController control;
+  public bool SpawnHole = true;
 
   public GameObject GolfBall;
   private Vector3 SpawnPosition;
@@ -38,7 +39,8 @@ public class GameController : MonoBehaviour {
     StrokeCountText.text = "Strokes: " + StrokeCount;
 
     HolePosition = transform.position;
-    Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
+    if(SpawnHole)
+      Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
 
     SpawnPosition = new Vector3(0, 3f, 0);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
