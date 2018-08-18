@@ -468,7 +468,7 @@ Prefab:
     - target: {fileID: 114191767295689206, guid: ec82beab168914c4cb88829711733fde,
         type: 2}
       propertyPath: SpawnHole
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec82beab168914c4cb88829711733fde, type: 2}
@@ -650,6 +650,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 777bd8c4ae14c7f4ebc11672622d1e85, type: 2}
+    - target: {fileID: 1528084556665684, guid: 7de4d2087d852472880e79756316afd9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7de4d2087d852472880e79756316afd9, type: 2}
   m_IsPrefabAsset: 0
