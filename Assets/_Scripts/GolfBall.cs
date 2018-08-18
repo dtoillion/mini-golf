@@ -18,6 +18,12 @@ public class GolfBall : MonoBehaviour {
     BallAudio = GetComponent<AudioSource>();
 	}
 
+  void Update() {
+    if(rb.velocity.magnitude > 10f){
+      rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10f);
+    }
+  }
+
   void OnCollisionEnter(Collision col) {
     BallAudio.clip = BallAudioClips[2];
     if(!BallAudio.isPlaying)
