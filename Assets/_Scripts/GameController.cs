@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
   }
 
   public void UpdatePortalSize () {
-		Portal.transform.position += new Vector3(0, 1f, 0);
+		Portal.transform.position += new Vector3(0, 0.1f, 0);
 	}
 
   public void SetUpCourse() {

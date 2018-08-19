@@ -5,6 +5,7 @@ using UnityEngine;
 public class GolfBall : MonoBehaviour {
 
   public float ForcePower = 10f;
+  public float ForcePowerLimit = 15f;
   public AudioClip[] BallAudioClips;
 
   private Light GolfBallLight;
@@ -21,8 +22,8 @@ public class GolfBall : MonoBehaviour {
 	}
 
   void Update() {
-    if(rb.velocity.magnitude > 10f){
-      rb.velocity = Vector3.ClampMagnitude(rb.velocity, 10f);
+    if(rb.velocity.magnitude > ForcePowerLimit){
+      rb.velocity = Vector3.ClampMagnitude(rb.velocity, ForcePowerLimit);
     }
   }
 
@@ -37,7 +38,7 @@ public class GolfBall : MonoBehaviour {
     Debug.Log(startPosition);
 
     Debug.Log(GolfBallLight);
-    GolfBallLight.intensity = 3f;
+    GolfBallLight.intensity = 2f;
 
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
@@ -47,7 +48,7 @@ public class GolfBall : MonoBehaviour {
     stopPosition = Input.mousePosition;
     Debug.Log(stopPosition);
 
-    GolfBallLight.intensity = 4f;
+    GolfBallLight.intensity = 3f;
 
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();

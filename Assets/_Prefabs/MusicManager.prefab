@@ -149,4 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicbg:
+  - {fileID: 8300000, guid: 61fc6d9f5e9fb4a8493a92780c580104, type: 3}
   - {fileID: 8300000, guid: dc00a14faccfc4cefb1cda77dd6f2421, type: 3}
+  - {fileID: 8300000, guid: 4afd3e156983e4133891e128aa3b75f8, type: 3}
+  - {fileID: 8300000, guid: a05c819662dd34688970c9cbf9d01add, type: 3}

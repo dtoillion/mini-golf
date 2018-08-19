@@ -209,7 +209,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
-  m_Intensity: 4
+  m_Intensity: 3
   m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForcePower: 10
+  ForcePowerLimit: 15
   BallAudioClips:
   - {fileID: 8300000, guid: 8bac35994e76e4f01babc047de40589d, type: 3}
   - {fileID: 8300000, guid: 8ecc80f4a181c4082b7eac837413f259, type: 3}
