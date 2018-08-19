@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 136295642613170314}
   - component: {fileID: 114956541320441254}
   - component: {fileID: 82187987675813642}
+  - component: {fileID: 108803447619642786}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -144,7 +145,6 @@ GameObject:
   - component: {fileID: 4300839086950910}
   - component: {fileID: 33865054998302656}
   - component: {fileID: 23430968208351998}
-  - component: {fileID: 108205678452825756}
   m_Layer: 0
   m_Name: Mesh1_Flag_Model
   m_TagString: Untagged
@@ -693,12 +693,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!108 &108205678452825756
+--- !u!108 &108803447619642786
 Light:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1873512143114430}
+  m_GameObject: {fileID: 1074238771454640}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
