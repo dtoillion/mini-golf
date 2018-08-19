@@ -33,8 +33,7 @@ public class GameController : MonoBehaviour {
   }
 
 	void Start() {
-    HoleCount = 0;
-    HoleCountText.text = "Hole: " + (HoleCount + 1);
+    HoleCountText.text = "Hole: " + (HoleCount + 1) + " of 9";
 
     StrokeCount = 0f;
     StrokeCountText.text = "Strokes: " + StrokeCount;
@@ -47,27 +46,33 @@ public class GameController : MonoBehaviour {
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
-  public void UpdatePortalSize () {
-		Portal.transform.position += new Vector3(0, 0.1f, 0);
-	}
-
   public void SetUpCourse() {
     // Destroy existing ball and hole
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
-    ObjectToDelete = GameObject.FindWithTag("Hole");
-    Destroy(ObjectToDelete);
 
-    // Increase the hole count and update the text
     HoleCount += 1;
-    HoleCountText.text = "Hole: " + (HoleCount + 1);
 
-    // Spawn the new hole and ball
-    Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
-    Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
+    if(HoleCount < 9)
+    {
+      ObjectToDelete = GameObject.FindWithTag("Hole");
+      Destroy(ObjectToDelete);
 
-    UpdatePortalSize();
+      // Increase the hole count and update the text
+      HoleCountText.text = "Hole: " + (HoleCount + 1) + " of 9";
+
+      // Spawn the new hole and ball
+      Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
+      Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
+
+      UpdatePortalSize();
+    }
+
   }
+
+  public void UpdatePortalSize () {
+		Portal.transform.position += new Vector3(0, 0.145f, 0);
+	}
 
   public void ResetBall() {
     ObjectToDelete = GameObject.FindWithTag("GolfBall");

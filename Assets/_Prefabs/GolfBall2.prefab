@@ -96,8 +96,8 @@ Rigidbody:
   m_GameObject: {fileID: 1785308795332792}
   serializedVersion: 2
   m_Mass: 2
-  m_Drag: 1
-  m_AngularDrag: 0.5
+  m_Drag: 0.6
+  m_AngularDrag: 0.2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -247,8 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38235f4c0af545be85d013546291e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForcePower: 10
-  ForcePowerLimit: 15
+  ForcePower: 11
+  ForcePowerLimit: 16
   BallAudioClips:
   - {fileID: 8300000, guid: 8bac35994e76e4f01babc047de40589d, type: 3}
   - {fileID: 8300000, guid: 8ecc80f4a181c4082b7eac837413f259, type: 3}

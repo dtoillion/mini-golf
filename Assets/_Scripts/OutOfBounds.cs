@@ -19,7 +19,6 @@ public class OutOfBounds : MonoBehaviour {
     }
   }
   IEnumerator BallOutOfBounds() {
-    Debug.Log("Ball Out!");
     GameController.control.NotificationText.text = "Out of bounds!";
     BallOutOfBoundsAudio.Play();
     yield return new WaitForSeconds(1f);

@@ -18,6 +18,8 @@ public class HoleMarker : MonoBehaviour {
     if(c.gameObject.tag == "GolfBall") {
       StartCoroutine("CountDown");
       HoleMarkerLight.intensity = 4f;
+      if(!CupAudio.isPlaying)
+        CupAudio.Play();
     }
 
   }
@@ -33,7 +35,6 @@ public class HoleMarker : MonoBehaviour {
   IEnumerator CountDown() {
     yield return new WaitForSeconds(0.5f);
     GameController.control.NotificationText.text = "3";
-    CupAudio.Play();
     yield return new WaitForSeconds(0.5f);
     GameController.control.NotificationText.text = "2";
     yield return new WaitForSeconds(0.5f);
