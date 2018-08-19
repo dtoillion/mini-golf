@@ -380,6 +380,11 @@ Light:
   m_CorrespondingSourceObject: {fileID: 108718953864127006, guid: ec82beab168914c4cb88829711733fde,
     type: 2}
   m_PrefabInternal: {fileID: 1068206172}
+--- !u!1 &1019716822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1620864170098254, guid: 312d33b6b98c44a43818b0543a263570,
+    type: 2}
+  m_PrefabInternal: {fileID: 704292664}
 --- !u!1001 &1025152101
 Prefab:
   m_ObjectHideFlags: 0
@@ -467,9 +472,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114191767295689206, guid: ec82beab168914c4cb88829711733fde,
         type: 2}
-      propertyPath: SpawnHole
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: Portal
+      value: 
+      objectReference: {fileID: 1019716822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec82beab168914c4cb88829711733fde, type: 2}
   m_IsPrefabAsset: 0

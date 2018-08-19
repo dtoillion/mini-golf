@@ -454,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnHole: 1
   GolfBall: {fileID: 1785308795332792, guid: a2deb996ab1dd4b53a79298519bf59d0, type: 2}
+  Portal: {fileID: 0}
   Holes:
   - {fileID: 1325748905120402, guid: 3c9506ba977c34adb893fd3b2770e69f, type: 2}
   - {fileID: 1819364873102910, guid: 02bf90cf50895498098caa5c8be1f5a7, type: 2}

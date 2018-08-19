@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
   public bool SpawnHole = true;
 
   public GameObject GolfBall;
+  public GameObject Portal;
   private Vector3 SpawnPosition;
 
   public GameObject[] Holes;
@@ -46,6 +47,10 @@ public class GameController : MonoBehaviour {
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
+  public void UpdatePortalSize () {
+		Portal.transform.position += new Vector3(0, 1f, 0);
+	}
+
   public void SetUpCourse() {
     // Destroy existing ball and hole
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
@@ -60,6 +65,8 @@ public class GameController : MonoBehaviour {
     // Spawn the new hole and ball
     Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
+
+    UpdatePortalSize();
   }
 
   public void ResetBall() {
