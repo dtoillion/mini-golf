@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-  void Update() {
-    if (Input.anyKey)
-      StartGame ();
+  public void StartKenneyJamGame() {
+    SceneManager.LoadScene("Kenneyjam");
   }
 
-	public void StartGame() {
-    SceneManager.LoadScene("Course 01");
+  public void StartSpaceCourseGame() {
+    SceneManager.LoadScene("SpaceCourse");
   }
 
 }

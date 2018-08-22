@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class MusicManager : MonoBehaviour {
@@ -12,6 +13,8 @@ public class MusicManager : MonoBehaviour {
 		if(!created) {
 			DontDestroyOnLoad(this.gameObject);
 			created = true;
+	  } else {
+	  	Destroy(gameObject);
 	  }
 		backgroundMusic = GetComponent <AudioSource> ();
 	}

@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
   public bool SpawnHole = true;
 
   public GameObject GolfBall;
+  public bool PortalLevel;
   public GameObject Portal;
   private Vector3 SpawnPosition;
 
@@ -64,8 +65,8 @@ public class GameController : MonoBehaviour {
       // Spawn the new hole and ball
       Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
       Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
-
-      UpdatePortalSize();
+      if(PortalLevel)
+        UpdatePortalSize();
     }
 
   }
@@ -74,14 +75,20 @@ public class GameController : MonoBehaviour {
 		Portal.transform.position += new Vector3(0, 0.145f, 0);
 	}
 
+  public void ReturnToMainMenu() {
+    SceneManager.LoadScene("MainMenu");
+  }
+
+  public void ResetGame() {
+    // SceneManager.LoadScene("Kenneyjam");
+    Debug.Log("reset");
+  }
+
   public void ResetBall() {
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
-  public void ResetGame() {
-    SceneManager.LoadScene("Course 01");
-  }
 
 }
