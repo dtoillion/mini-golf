@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour {
   }
 
   public void ResetGame() {
-    // SceneManager.LoadScene("Kenneyjam");
+    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     Debug.Log("reset");
   }
 
