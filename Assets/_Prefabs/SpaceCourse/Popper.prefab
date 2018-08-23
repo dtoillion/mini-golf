@@ -9,49 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1785308795332792}
+  m_RootGameObject: {fileID: 1563476642715090}
   m_IsPrefabAsset: 1
---- !u!1 &1785308795332792
+--- !u!1 &1563476642715090
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4864525525277772}
-  - component: {fileID: 33436972656647508}
-  - component: {fileID: 23817918657516912}
-  - component: {fileID: 135951457535887668}
-  - component: {fileID: 54293787594116336}
-  - component: {fileID: 114853112720124576}
-  - component: {fileID: 108942664590860432}
-  - component: {fileID: 82339435351506870}
+  - component: {fileID: 4727621913882950}
+  - component: {fileID: 33513481319266296}
+  - component: {fileID: 23576630830220742}
+  - component: {fileID: 136539597099802420}
+  - component: {fileID: 114915143467524624}
+  - component: {fileID: 82795380566664566}
+  - component: {fileID: 108733755230926896}
   m_Layer: 0
-  m_Name: GolfBall
-  m_TagString: GolfBall
+  m_Name: Popper
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4864525525277772
+--- !u!4 &4727621913882950
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
+  m_GameObject: {fileID: 1563476642715090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23817918657516912
+--- !u!23 &23576630830220742
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
+  m_GameObject: {fileID: 1563476642715090}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 696ff1f95ef824aa194d3667582af7bb, type: 2}
+  - {fileID: 2100000, guid: 6ffb74330f8f24a6e842a7d7dc3743c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,39 +80,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33436972656647508
+--- !u!33 &33513481319266296
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54293787594116336
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
-  serializedVersion: 2
-  m_Mass: 2
-  m_Drag: 0.5
-  m_AngularDrag: 0.2
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!82 &82339435351506870
+  m_GameObject: {fileID: 1563476642715090}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &82795380566664566
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
+  m_GameObject: {fileID: 1563476642715090}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243417401195235134, guid: a6f0b9f3685594e438c8f7fb7640e55f,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fdb1ac83f12ec4fd4a6660aae228b500, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -199,18 +183,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!108 &108942664590860432
+--- !u!108 &108733755230926896
 Light:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
+  m_GameObject: {fileID: 1563476642715090}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.07058824, g: 0.5372549, b: 0.654902, a: 1}
-  m_Intensity: 1
-  m_Range: 4
+  m_Color: {r: 0.9098039, g: 0.25490198, b: 0.09411765, a: 1}
+  m_Intensity: 0
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -236,31 +220,35 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114853112720124576
+--- !u!114 &114915143467524624
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
+  m_GameObject: {fileID: 1563476642715090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38235f4c0af545be85d013546291e7b, type: 3}
+  m_Script: {fileID: 11500000, guid: d9ff73e48b7a14ab9b98b0441fc06d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallAudioClips:
-  - {fileID: 8300000, guid: 8bac35994e76e4f01babc047de40589d, type: 3}
-  - {fileID: 8300000, guid: 8ecc80f4a181c4082b7eac837413f259, type: 3}
-  - {fileID: 8300000, guid: b128059c46dd64a9d926b78724385c20, type: 3}
-  ForcePower: 1
---- !u!135 &135951457535887668
-SphereCollider:
+  Speed: 1
+  WaitTime: 1
+  XOne: 0
+  XTwo: 0
+  YOne: -1
+  YTwo: 1
+  ZOne: 0
+  ZTwo: 0
+--- !u!136 &136539597099802420
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785308795332792}
-  m_Material: {fileID: 13400000, guid: 4594c7919aa554955a792b202a2b0cb4, type: 2}
+  m_GameObject: {fileID: 1563476642715090}
+  m_Material: {fileID: 13400000, guid: 01571ba68fb2dad46aa03094ab219579, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
