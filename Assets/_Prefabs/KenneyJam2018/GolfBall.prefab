@@ -247,8 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3f6af75556e4a83b15e4013ca1878f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForcePower: 10
-  ForcePowerLimit: 12
+  ForcePower: 11
+  ForcePowerLimit: 14
   BallAudioClips:
   - {fileID: 8300000, guid: 8bac35994e76e4f01babc047de40589d, type: 3}
   - {fileID: 8300000, guid: 8ecc80f4a181c4082b7eac837413f259, type: 3}

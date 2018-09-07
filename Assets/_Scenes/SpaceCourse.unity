@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45082235, g: 0.5007403, b: 0.57469285, a: 1}
+  m_IndirectSpecularColor: {r: 0.45082217, g: 0.5007408, b: 0.5746939, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 21d7129975b2f4ed1a9e34ccd687831a,
+  m_LightingDataAsset: {fileID: 112000002, guid: 5c37a3968fdff4f609fbc1bf4d77d24a,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -161,7 +161,7 @@ Prefab:
     - target: {fileID: 114612567134707928, guid: 0ecb10f153aa647359de88cdc3bf6471,
         type: 2}
       propertyPath: SpawnHole
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
       propertyPath: m_LocalPosition.z
@@ -219,6 +219,40 @@ Prefab:
       value: 
       objectReference: {fileID: 1472306905803938, guid: 15e9249e80de94d15ac94646d4a40177,
         type: 2}
+    - target: {fileID: 114680656005729770, guid: 0ecb10f153aa647359de88cdc3bf6471,
+        type: 2}
+      propertyPath: CameraSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676879035005586, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 20755977164005958, guid: 0ecb10f153aa647359de88cdc3bf6471,
+        type: 2}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecb10f153aa647359de88cdc3bf6471, type: 2}
   m_IsPrefabAsset: 0
@@ -263,8 +297,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1325748905120402, guid: 5f0c9b4369f4d41178a2e5e93e58cced, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 136181718341422962, guid: 5f0c9b4369f4d41178a2e5e93e58cced,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e52fb17f9b1e7fd48b8955f1391d3688,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0c9b4369f4d41178a2e5e93e58cced, type: 2}
   m_IsPrefabAsset: 0
@@ -310,3 +350,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2cdda73c5cf54c449e810dcf20b1dc7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1994297438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1082538319663206, guid: 0ecb10f153aa647359de88cdc3bf6471,
+    type: 2}
+  m_PrefabInternal: {fileID: 418086034}
+--- !u!54 &1994297441
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994297438}
+  serializedVersion: 2
+  m_Mass: 3
+  m_Drag: 1
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
