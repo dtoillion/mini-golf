@@ -6,12 +6,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-  public void StartKenneyJamGame() {
-    SceneManager.LoadScene("Kenneyjam");
-  }
-
-  public void StartSpaceCourseGame() {
-    SceneManager.LoadScene("SpaceCourse");
+  public void StartGame() {
+    SceneManager.LoadScene("Main");
   }
 
 }
