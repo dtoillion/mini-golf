@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114749512537198752}
   - component: {fileID: 82201353358736204}
   m_Layer: 5
-  m_Name: ResetGame
+  m_Name: ResetGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4908121414777792}
   - component: {fileID: 108084321486390938}
   m_Layer: 0
-  m_Name: Directional Light (2)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 114056952048883520}
   - component: {fileID: 82431494782873442}
   m_Layer: 5
-  m_Name: ResetBall
+  m_Name: ResetBallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 114844817283863472}
   - component: {fileID: 82210161278556588}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,13 +313,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780643584992830}
-  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 5.5, y: 4, z: -1}
+  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
+  m_LocalPosition: {x: 5.5, y: 7.8, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638448206928326}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
 --- !u!4 &4540141021059862
 Transform:
   m_ObjectHideFlags: 1
@@ -331,7 +331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638448206928326}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4638448206928326
 Transform:
@@ -344,9 +344,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4045513468574630}
+  - {fileID: 4908121414777792}
   - {fileID: 224917380655865288}
   - {fileID: 4540141021059862}
-  - {fileID: 4908121414777792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -356,13 +356,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268302200701350}
-  m_LocalRotation: {x: 0.88111955, y: 0.11507512, z: -0.36497167, w: 0.27781594}
-  m_LocalPosition: {x: 5, y: 50, z: 3}
+  m_LocalRotation: {x: 0.19996412, y: 0.3736123, z: -0.08282785, w: 0.90198}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638448206928326}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 145, y: 45, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 25, y: 45, z: 0}
 --- !u!20 &20064901191579808
 Camera:
   m_ObjectHideFlags: 1
@@ -383,7 +383,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 31
   orthographic: 1
@@ -804,7 +804,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.9811321, g: 0.61552155, b: 0.8592619, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_Range: 150
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -818,7 +818,7 @@ Light:
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_Flare: {fileID: 0}
+  m_Flare: {fileID: 12100000, guid: 09ebe82dbd1113c3d000dc0b8d76c639, type: 2}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
@@ -850,9 +850,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
-    m_HighlightedColor: {r: 0.9098039, g: 0.2627451, b: 0.5764706, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 0.88235295}
+    m_HighlightedColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
+    m_PressedColor: {r: 0.98039216, g: 0.4627451, b: 0.45882353, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -948,19 +948,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6073cf1dafcb4497a8fa234560f98202, type: 3}
-    m_FontSize: 36
+    m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 54
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Help! My friends are lost in the future! Help me activate the portal and
-    get them back! THE PORTAL HAS NINE CIRCUITS, COMPLETE EACH ONE TO REACTIVATE IT!
+  m_Text: Click, Drag, Release!
 --- !u!114 &114192686013829426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1115,9 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnHole: 1
-  GolfBall: {fileID: 1785308795332792, guid: a2deb996ab1dd4b53a79298519bf59d0, type: 2}
-  PortalLevel: 1
-  Portal: {fileID: 0}
+  GolfBall: {fileID: 1785308795332792, guid: 1028e0991d85a46cbbfb2e2e2acf8d71, type: 2}
   Holes:
   - {fileID: 1325748905120402, guid: 3c9506ba977c34adb893fd3b2770e69f, type: 2}
   - {fileID: 1819364873102910, guid: 02bf90cf50895498098caa5c8be1f5a7, type: 2}
@@ -1128,7 +1125,6 @@ MonoBehaviour:
   - {fileID: 1087836899233322, guid: b9f96ba28590a4cbba29281e18d3b09e, type: 2}
   - {fileID: 1528084556665684, guid: 7de4d2087d852472880e79756316afd9, type: 2}
   - {fileID: 1472306905803938, guid: 64287e41542cb42a19982120c50db390, type: 2}
-  HoleCount: 0
   HoleCountText: {fileID: 114961575645437378}
   NotificationText: {fileID: 114202956086988706}
   StrokeCount: 0
@@ -1226,9 +1222,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
-    m_HighlightedColor: {r: 0.9098039, g: 0.2627451, b: 0.5764706, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 0.88235295}
+    m_HighlightedColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
+    m_PressedColor: {r: 0.98039216, g: 0.4627451, b: 0.45882353, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1365,9 +1361,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
-    m_HighlightedColor: {r: 0.9098039, g: 0.2627451, b: 0.5764706, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 0.88235295}
+    m_HighlightedColor: {r: 1, g: 0.4627451, b: 0.45882353, a: 1}
+    m_PressedColor: {r: 0.98039216, g: 0.4627451, b: 0.45882353, a: 0.78431374}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1809,7 +1805,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 289, y: 151}
-  m_SizeDelta: {x: 300, y: 200}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224917380655865288
 RectTransform:
@@ -1827,7 +1823,7 @@ RectTransform:
   - {fileID: 224176842441078094}
   - {fileID: 224862164945905720}
   m_Father: {fileID: 4638448206928326}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
