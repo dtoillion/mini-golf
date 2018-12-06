@@ -30,7 +30,7 @@ public class GolfBall : MonoBehaviour {
 
   void OnMouseDown() {
     startPosition = Input.mousePosition;
-    Debug.Log("Start:" + startPosition);
+    // Debug.Log("Start:" + startPosition);
     GolfBallLight.intensity = 0.5f;
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
@@ -38,7 +38,7 @@ public class GolfBall : MonoBehaviour {
 
   void OnMouseUp() {
     stopPosition = Input.mousePosition;
-    Debug.Log("Stop:" + stopPosition);
+    // Debug.Log("Stop:" + stopPosition);
     GolfBallLight.intensity = 1f;
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();
@@ -46,7 +46,7 @@ public class GolfBall : MonoBehaviour {
     aimDirection = Camera.main.ViewportToWorldPoint(new Vector3(startPosition.x - stopPosition.x, startPosition.y - stopPosition.y, startPosition.z - stopPosition.z));
     aimDirection = aimDirection / 3;
     rb.AddForce(aimDirection.x, 0f, aimDirection.z);
-    Debug.Log("Force:" + aimDirection);
+    // Debug.Log("Force:" + aimDirection);
 
     GameController.control.StrokeCount += 1f;
     GameController.control.StrokeCountText.text = "Stoke: " + GameController.control.StrokeCount;
