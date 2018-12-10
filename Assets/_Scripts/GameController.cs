@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
   private GameObject ObjectToDelete;
   private Vector3 HolePosition;
 
-  private int HoleCount;
+  public int HoleCount;
   public Text HoleCountText;
 
   public Text NotificationText;
@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour {
 
     HoleCount += 1;
 
-    if(HoleCount < 9)
+    if(HoleCount < Holes.Length)
     {
       ObjectToDelete = GameObject.FindWithTag("Hole");
       Destroy(ObjectToDelete);
@@ -63,6 +63,8 @@ public class GameController : MonoBehaviour {
       // Spawn the new hole and ball
       Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
       Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
+    } else {
+      NotificationText.text = "You Win!";
     }
 
   }
