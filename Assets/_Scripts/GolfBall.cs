@@ -28,14 +28,14 @@ public class GolfBall : MonoBehaviour {
 
   void OnMouseDown() {
     startPosition = Input.mousePosition;
-    GolfBallLight.intensity = 0.5f;
+    GolfBallLight.intensity = 0.6f;
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
   }
 
   void OnMouseUp() {
     stopPosition = Input.mousePosition;
-    GolfBallLight.intensity = 1f;
+    GolfBallLight.intensity = 0.3f;
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();
 

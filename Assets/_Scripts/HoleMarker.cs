@@ -17,7 +17,7 @@ public class HoleMarker : MonoBehaviour {
   void OnTriggerEnter(Collider c) {
     if(c.gameObject.tag == "GolfBall") {
       StartCoroutine("CountDown");
-      HoleMarkerLight.intensity = 4f;
+      HoleMarkerLight.intensity = 1f;
       if(!CupAudio.isPlaying)
         CupAudio.Play();
     }
@@ -28,7 +28,7 @@ public class HoleMarker : MonoBehaviour {
     if(c.gameObject.tag == "GolfBall") {
       StopCoroutine("CountDown");
       GameController.control.NotificationText.text = "";
-      HoleMarkerLight.intensity = 1f;
+      HoleMarkerLight.intensity = 0.3f;
     }
   }
 
@@ -41,7 +41,6 @@ public class HoleMarker : MonoBehaviour {
     GameController.control.NotificationText.text = "1";
     yield return new WaitForSeconds(0.5f);
     GameController.control.NotificationText.text = "Ball In!";
-    HoleMarkerLight.intensity = 5f;
     yield return new WaitForSeconds(1f);
 
     GameController.control.SetUpCourse();
