@@ -5,8 +5,6 @@ using UnityEngine;
 public class GolfBall : MonoBehaviour {
 
   public AudioClip[] BallAudioClips;
-  public float ForcePower;
-
   private Light GolfBallLight;
   private AudioSource BallAudio;
   private Rigidbody rb;
@@ -30,7 +28,6 @@ public class GolfBall : MonoBehaviour {
 
   void OnMouseDown() {
     startPosition = Input.mousePosition;
-    // Debug.Log("Start:" + startPosition);
     GolfBallLight.intensity = 0.5f;
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
@@ -38,15 +35,15 @@ public class GolfBall : MonoBehaviour {
 
   void OnMouseUp() {
     stopPosition = Input.mousePosition;
-    // Debug.Log("Stop:" + stopPosition);
     GolfBallLight.intensity = 1f;
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();
 
-    aimDirection = Camera.main.ViewportToWorldPoint(new Vector3(startPosition.x - stopPosition.x, startPosition.y - stopPosition.y, startPosition.z - stopPosition.z));
-    aimDirection = aimDirection / 3;
-    rb.AddForce(aimDirection.x, 0f, aimDirection.z);
-    // Debug.Log("Force:" + aimDirection);
+    aimDirection = Camera.main.ScreenToViewportPoint(new Vector3(startPosition.x - stopPosition.x, startPosition.y - stopPosition.y, startPosition.z - stopPosition.z));
+    Debug.Log(aimDirection);
+    aimDirection = new Vector3(aimDirection.x, aimDirection.y, aimDirection.z) * 10000;
+    Debug.Log(aimDirection);
+    rb.AddForce(aimDirection.x, 0f, aimDirection.y);
 
     GameController.control.StrokeCount += 1f;
     GameController.control.StrokeCountText.text = "Stoke: " + GameController.control.StrokeCount;

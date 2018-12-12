@@ -97,6 +97,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1283628778662914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4411609750740814}
+  - component: {fileID: 20243261703216784}
+  - component: {fileID: 81536852737182846}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1308219255388788
 GameObject:
   m_ObjectHideFlags: 1
@@ -252,23 +269,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1780643584992830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4045513468574630}
-  - component: {fileID: 20064901191579808}
-  - component: {fileID: 81536852737182846}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1879348052632582
 GameObject:
   m_ObjectHideFlags: 1
@@ -307,19 +307,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4045513468574630
+--- !u!4 &4411609750740814
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1780643584992830}
-  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 5.5, y: 7.8, z: -2}
+  m_GameObject: {fileID: 1283628778662914}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 16.5, y: 20, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638448206928326}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!4 &4540141021059862
 Transform:
   m_ObjectHideFlags: 1
@@ -343,7 +343,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4045513468574630}
+  - {fileID: 4411609750740814}
   - {fileID: 4908121414777792}
   - {fileID: 224917380655865288}
   - {fileID: 4540141021059862}
@@ -363,12 +363,12 @@ Transform:
   m_Father: {fileID: 4638448206928326}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 25, y: 45, z: 0}
---- !u!20 &20064901191579808
+--- !u!20 &20243261703216784
 Camera:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1780643584992830}
+  m_GameObject: {fileID: 1283628778662914}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -383,11 +383,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.001
   far clip plane: 1000
   field of view: 31
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -398,7 +398,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -408,7 +408,7 @@ AudioListener:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1780643584992830}
+  m_GameObject: {fileID: 1283628778662914}
   m_Enabled: 1
 --- !u!82 &82201353358736204
 AudioSource:
@@ -803,8 +803,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.9811321, g: 0.61552155, b: 0.8592619, a: 1}
-  m_Intensity: 0.7
+  m_Color: {r: 0.9433962, g: 0.81434673, b: 0.8433829, a: 1}
+  m_Intensity: 0.25
   m_Range: 150
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1125,6 +1125,7 @@ MonoBehaviour:
   - {fileID: 1087836899233322, guid: b9f96ba28590a4cbba29281e18d3b09e, type: 2}
   - {fileID: 1528084556665684, guid: 7de4d2087d852472880e79756316afd9, type: 2}
   - {fileID: 1472306905803938, guid: 64287e41542cb42a19982120c50db390, type: 2}
+  HoleCount: 0
   HoleCountText: {fileID: 114961575645437378}
   NotificationText: {fileID: 114202956086988706}
   StrokeCount: 0
@@ -1182,7 +1183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8745098, g: 0.9019608, b: 0.9137255, a: 1}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1321,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8745098, g: 0.9019608, b: 0.9137255, a: 1}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1450,7 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8745098, g: 0.9019608, b: 0.9137255, a: 1}
+  m_Color: {r: 1, g: 0.4627451, b: 0.45882353, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1477,7 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8745098, g: 0.9019608, b: 0.9137255, a: 1}
+  m_Color: {r: 0.1764706, g: 0.20392157, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
