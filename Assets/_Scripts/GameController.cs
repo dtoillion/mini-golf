@@ -46,14 +46,16 @@ public class GameController : MonoBehaviour {
   }
 
   public void SetUpCourse() {
-    // Destroy existing ball and hole
-    ObjectToDelete = GameObject.FindWithTag("GolfBall");
-    Destroy(ObjectToDelete);
 
-    HoleCount += 1;
 
-    if(HoleCount < Holes.Length)
+    if(HoleCount < Holes.Length - 1)
     {
+      HoleCount += 1;
+  
+      // Destroy existing ball and hole
+      ObjectToDelete = GameObject.FindWithTag("GolfBall");
+      Destroy(ObjectToDelete);
+
       ObjectToDelete = GameObject.FindWithTag("Hole");
       Destroy(ObjectToDelete);
 
