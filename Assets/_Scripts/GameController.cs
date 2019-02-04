@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
   public bool SinglePlayer = true;
 
   public GameObject GolfBall;
+  public GameObject GolfBall2P;
   private Vector3 SpawnPosition;
 
   public GameObject[] Holes;
@@ -24,6 +25,9 @@ public class GameController : MonoBehaviour {
 
   public float StrokeCount;
   public Text StrokeCountText;
+
+  public float StrokeCount2P;
+  public Text StrokeCountText2P;
 
   void Awake() {
     if (control == null)
