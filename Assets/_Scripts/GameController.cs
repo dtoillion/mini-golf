@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 
   public static GameController control;
   public bool SpawnHole = true;
+  public bool SinglePlayer = true;
 
   public GameObject GolfBall;
   private Vector3 SpawnPosition;
@@ -47,11 +48,10 @@ public class GameController : MonoBehaviour {
 
   public void SetUpCourse() {
 
-
     if(HoleCount < Holes.Length - 1)
     {
       HoleCount += 1;
-  
+
       // Destroy existing ball and hole
       ObjectToDelete = GameObject.FindWithTag("GolfBall");
       Destroy(ObjectToDelete);

@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Scenes/Main.unity
+    path: Assets/_Scenes/GameScene.unity
     guid: 34d82efec5e0f48fc93337be6416b832
-  - enabled: 0
-    path: Assets/_Scenes/KenneyJam.unity
-    guid: 5360e8f64bf9a4eaa84ef23e2846e70a
-  - enabled: 0
-    path: Assets/_Scenes/SpaceCourse.unity
-    guid: de3c89c367bd14ec9b0323cbe7eca3f0
   m_configObjects: {}
