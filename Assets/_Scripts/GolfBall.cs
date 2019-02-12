@@ -40,9 +40,9 @@ public class GolfBall : MonoBehaviour {
     BallAudio.Play();
 
     aimDirection = Camera.main.ScreenToViewportPoint(new Vector3(startPosition.x - stopPosition.x, startPosition.y - stopPosition.y, startPosition.z - stopPosition.z));
-    Debug.Log(aimDirection);
     aimDirection = new Vector3(aimDirection.x, aimDirection.y, aimDirection.z) * 10000;
-    Debug.Log(aimDirection);
+
+    // y-force added to z-axis
     rb.AddForce(aimDirection.x, 0f, aimDirection.y);
 
     GameController.control.StrokeCount += 1f;

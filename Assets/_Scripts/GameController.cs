@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour {
   private GameObject ObjectToDelete;
   private Vector3 HolePosition;
 
+  public GameObject MainMenuScreen;
+  AudioSource MenuAudioSource;
+
   public int HoleCount;
   public Text HoleCountText;
 
@@ -34,6 +37,9 @@ public class GameController : MonoBehaviour {
       control = this;
     else if (control != this)
       Destroy(gameObject);
+
+    MenuAudioSource = GetComponent<AudioSource>();
+
   }
 
 	void Start() {
@@ -75,15 +81,29 @@ public class GameController : MonoBehaviour {
 
   }
 
-  public void ReturnToMainMenu() {
-    SceneManager.LoadScene("MainMenu");
+  // Menu stuff
+  // Main Menu and Players selection
+
+  public void PlayMenuSound() {
+    MenuAudioSource.Play();
+  }
+
+  public void ToggleMainMenu() {
+    PlayMenuSound();
+    if(MainMenuScreen.activeSelf)
+      MainMenuScreen.SetActive(false);
+    else
+      MainMenuScreen.SetActive(true);
   }
 
   public void ResetGame() {
+    PlayMenuSound();
     SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
   }
 
   public void ResetBall() {
+    PlayMenuSound();
+    ToggleMainMenu();
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);

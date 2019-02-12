@@ -7,15 +7,8 @@ public class MusicManager : MonoBehaviour {
 	public AudioClip[] musicbg;
 	AudioSource backgroundMusic;
 	private int i;
-	private static bool created = false;
 
 	void Awake() {
-		if(!created) {
-			DontDestroyOnLoad(this.gameObject);
-			created = true;
-	  } else {
-	  	Destroy(gameObject);
-	  }
 		backgroundMusic = GetComponent <AudioSource> ();
 	}
 
