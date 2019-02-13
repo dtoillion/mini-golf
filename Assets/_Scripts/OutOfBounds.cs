@@ -18,6 +18,7 @@ public class OutOfBounds : MonoBehaviour {
       StartCoroutine("BallOutOfBounds");
     }
   }
+
   IEnumerator BallOutOfBounds() {
     GameController.control.NotificationText.text = "Out of bounds!";
     BallOutOfBoundsAudio.Play();
@@ -27,4 +28,5 @@ public class OutOfBounds : MonoBehaviour {
     BallOut = false;
     StopCoroutine("BallOutOfBounds");
   }
+
 }

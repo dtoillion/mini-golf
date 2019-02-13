@@ -9,7 +9,6 @@ public class HoleMarker : MonoBehaviour {
   private Light HoleMarkerLight;
 
   void Start() {
-    GameController.control.NotificationText.text = "";
     CupAudio = GetComponent<AudioSource>();
     HoleMarkerLight = GetComponent<Light>();
   }

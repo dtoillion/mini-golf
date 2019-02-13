@@ -7,30 +7,31 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
   public static GameController control;
-  public bool SpawnHole = true;
-  public bool SinglePlayer = true;
 
-  public GameObject GolfBall;
-  public GameObject GolfBall2P;
-  private Vector3 SpawnPosition;
-
-  public GameObject[] Holes;
-  private GameObject ObjectToDelete;
-  private Vector3 HolePosition;
-
-  public GameObject MainMenuScreen;
   AudioSource MenuAudioSource;
 
-  public int HoleCount;
-  public Text HoleCountText;
+  private GameObject ObjectToDelete;
+  private int CurrentTurnStrokeCount;
+  private Vector3 HolePosition;
+  private Vector3 SpawnPosition;
 
-  public Text NotificationText;
-
-  public float StrokeCount;
-  public Text StrokeCountText;
+  public bool SinglePlayer = false;
+  public bool SpawnHole = true;
 
   public float StrokeCount2P;
+  public float StrokeCount;
+
+  public GameObject GolfBall2P;
+  public GameObject GolfBall;
+  public GameObject MainMenuScreen;
+  public GameObject[] Holes;
+
+  public int HoleCount;
+
+  public Text HoleCountText;
+  public Text NotificationText;
   public Text StrokeCountText2P;
+  public Text StrokeCountText;
 
   void Awake() {
     if (control == null)
@@ -44,9 +45,13 @@ public class GameController : MonoBehaviour {
 
 	void Start() {
     HoleCountText.text = "Hole: " + (HoleCount + 1) + " of 9";
-
+    NotificationText.text = "Player 1 Go!";
+    NotificationText.color = new Color32(9, 132, 227, 255);
+    // NotificationText.color = new Color32(194, 54, 22, 255);
     StrokeCount = 0f;
-    StrokeCountText.text = "Strokes: " + StrokeCount;
+    StrokeCountText.text = "P1: " + StrokeCount;
+    StrokeCount2P = 0f;
+    StrokeCountText2P.text = "P2: " + StrokeCount2P;
 
     HolePosition = transform.position;
     if(SpawnHole)
@@ -103,7 +108,8 @@ public class GameController : MonoBehaviour {
 
   public void ResetBall() {
     PlayMenuSound();
-    ToggleMainMenu();
+    if(MainMenuScreen.activeSelf)
+      ToggleMainMenu();
     ObjectToDelete = GameObject.FindWithTag("GolfBall");
     Destroy(ObjectToDelete);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);

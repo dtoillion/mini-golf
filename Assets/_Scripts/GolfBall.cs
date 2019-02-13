@@ -46,7 +46,7 @@ public class GolfBall : MonoBehaviour {
     rb.AddForce(aimDirection.x, 0f, aimDirection.y);
 
     GameController.control.StrokeCount += 1f;
-    GameController.control.StrokeCountText.text = "Stoke: " + GameController.control.StrokeCount;
+    GameController.control.StrokeCountText.text = "P1: " + GameController.control.StrokeCount;
   }
 
 }
