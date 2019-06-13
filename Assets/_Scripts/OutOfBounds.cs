@@ -21,6 +21,7 @@ public class OutOfBounds : MonoBehaviour {
   IEnumerator BallOutOfBounds() {
     GameController.control.NotificationText.text = "Out of bounds!";
     BallOutOfBoundsAudio.Play();
+    CameraShake.Shake(0.5f, 0.5f);
     yield return new WaitForSeconds(1f);
     GameController.control.ResetBall();
     GameController.control.NotificationText.text = "";

@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
   public static GameController control;
+
   public bool SpawnHole = true;
-  public bool SinglePlayer = true;
 
   public GameObject GolfBall;
   private Vector3 SpawnPosition;
@@ -71,12 +71,8 @@ public class GameController : MonoBehaviour {
 
   }
 
-  public void ReturnToMainMenu() {
-    SceneManager.LoadScene("MainMenu");
-  }
-
   public void ResetGame() {
-    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
   }
 
   public void ResetBall() {

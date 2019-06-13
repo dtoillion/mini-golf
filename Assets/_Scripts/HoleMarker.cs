@@ -17,6 +17,7 @@ public class HoleMarker : MonoBehaviour {
   void OnTriggerEnter(Collider c) {
     if(c.gameObject.tag == "GolfBall") {
       StartCoroutine("CountDown");
+      CameraShake.Shake(0.3f, 0.3f);
       HoleMarkerLight.intensity = 1f;
       if(!CupAudio.isPlaying)
         CupAudio.Play();
