@@ -43,9 +43,7 @@ public class HoleMarker : MonoBehaviour {
     yield return new WaitForSeconds(0.5f);
     GameController.control.NotificationText.text = "Ball In!";
     yield return new WaitForSeconds(1f);
-
     GameController.control.SetUpCourse();
-
   }
 
 }
