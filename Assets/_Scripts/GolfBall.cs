@@ -5,12 +5,14 @@ using UnityEngine;
 public class GolfBall : MonoBehaviour {
 
   public AudioClip[] BallAudioClips;
-  private Light GolfBallLight;
   private AudioSource BallAudio;
   private Rigidbody rb;
   private Vector3 startPosition;
   private Vector3 stopPosition;
   private Vector3 aimDirection;
+  private Light GolfBallLight;
+
+  private bool GrabbedOn = false;
 
 	void Awake() {
     rb = GetComponent<Rigidbody>();
@@ -26,16 +28,27 @@ public class GolfBall : MonoBehaviour {
     }
   }
 
+  void OnMouseExit() {
+    if(!GrabbedOn)
+      GolfBallLight.intensity = 0f;
+  }
+
+  void OnMouseOver() {
+    if(!GrabbedOn)
+      GolfBallLight.intensity = 2f;
+  }
+
   void OnMouseDown() {
+    GrabbedOn = true;
+    GolfBallLight.intensity = 1f;
     startPosition = Input.mousePosition;
-    GolfBallLight.intensity = 0.6f;
     BallAudio.clip = BallAudioClips[0];
     BallAudio.Play();
   }
 
   void OnMouseUp() {
+    GrabbedOn = false;
     stopPosition = Input.mousePosition;
-    GolfBallLight.intensity = 0.3f;
     BallAudio.clip = BallAudioClips[1];
     BallAudio.Play();
 

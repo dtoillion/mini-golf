@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour {
     if(SpawnHole)
       Instantiate(Holes[HoleCount], HolePosition, transform.rotation);
 
-    SpawnPosition = new Vector3(0, 3f, 0);
+    SpawnPosition = new Vector3(0, 5f, 0);
     Instantiate(GolfBall, SpawnPosition, Quaternion.identity);
   }
 
