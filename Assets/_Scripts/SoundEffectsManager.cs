@@ -14,45 +14,40 @@ public class SoundEffectsManager : MonoBehaviour
     audioSrc = GetComponent<AudioSource>();
   }
 
-  public void GameOverSound(){
+  public void BallHitsObject () {
     audioSrc.clip = audioClips[0];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
-  public void PlayerHitSound(){
+
+  public void PlayerMouseDown () {
     audioSrc.clip = audioClips[1];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
-  public void CollectOrbSound(){
+
+  public void PlayerMouseUp () {
     audioSrc.clip = audioClips[2];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
-  public void ReverseSound(){
+
+  public void BallHitsFlagPole () {
     audioSrc.clip = audioClips[3];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
-  public void PlayerUpSound(){
+
+  public void BallHitsFlagPoleHard () {
     audioSrc.clip = audioClips[4];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
-  public void PlayerDownSound(){
+
+  public void BallGoesInCup () {
     audioSrc.clip = audioClips[5];
+    audioSrc.pitch = (Random.Range(0.6f, 1.2f));
     audioSrc.PlayOneShot(audioSrc.clip, 1f);
-  }
-  public void CoolDownSound(){
-    audioSrc.clip = audioClips[6];
-    audioSrc.PlayOneShot(audioSrc.clip, 1f);
-  }
-  public void SpawnSound(){
-    audioSrc.clip = audioClips[7];
-    audioSrc.PlayOneShot(audioSrc.clip, 1f);
-  }
-  public void PauseSound(){
-    audioSrc.clip = audioClips[8];
-    audioSrc.PlayOneShot(audioSrc.clip, 1f);
-  }
-  public void StageClearedSound(){
-   audioSrc.clip = audioClips[9];
-   audioSrc.PlayOneShot(audioSrc.clip, 1f);
   }
 
 }

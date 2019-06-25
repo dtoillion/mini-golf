@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GolfBall : MonoBehaviour {
 
-  public AudioClip[] BallAudioClips;
-  private AudioSource BallAudio;
   private Rigidbody rb;
   private Vector3 startPosition;
   private Vector3 stopPosition;
@@ -16,16 +14,12 @@ public class GolfBall : MonoBehaviour {
 
 	void Awake() {
     rb = GetComponent<Rigidbody>();
-    BallAudio = GetComponent<AudioSource>();
     GolfBallLight = GetComponent<Light>();
+    GolfBallLight.intensity = 0f;
 	}
 
   void OnCollisionEnter(Collision col) {
-    BallAudio.clip = BallAudioClips[2];
-    if(!BallAudio.isPlaying)
-    {
-      BallAudio.Play();
-    }
+    SoundEffectsManager.soundControl.BallHitsObject();
   }
 
   void OnMouseExit() {
@@ -42,15 +36,14 @@ public class GolfBall : MonoBehaviour {
     GrabbedOn = true;
     GolfBallLight.intensity = 1f;
     startPosition = Input.mousePosition;
-    BallAudio.clip = BallAudioClips[0];
-    BallAudio.Play();
+    SoundEffectsManager.soundControl.PlayerMouseDown();
   }
 
   void OnMouseUp() {
     GrabbedOn = false;
+    GolfBallLight.intensity = 0f;
     stopPosition = Input.mousePosition;
-    BallAudio.clip = BallAudioClips[1];
-    BallAudio.Play();
+    SoundEffectsManager.soundControl.PlayerMouseUp();
 
     aimDirection = Camera.main.ScreenToViewportPoint(new Vector3(startPosition.x - stopPosition.x, startPosition.y - stopPosition.y, startPosition.z - stopPosition.z));
     aimDirection = new Vector3(aimDirection.x, aimDirection.y, aimDirection.z) * 10000;

@@ -13,11 +13,14 @@ public class ImpactReactions : MonoBehaviour
   }
 
   void OnCollisionEnter(Collision col) {
-    if(!Impact) {
-      Debug.Log("impact");
+    if((!Impact) && (col.relativeVelocity.magnitude > 8)) {
       Impact = true;
       rb.isKinematic = false;
+      SoundEffectsManager.soundControl.BallHitsFlagPoleHard();
       rb.AddForce(30f, 0, 0);
+      rb.AddTorque(transform.up * 1000f * 360f);
+    } else if (col.relativeVelocity.magnitude > 3) {
+      SoundEffectsManager.soundControl.BallHitsFlagPole();
     }
   }
 }

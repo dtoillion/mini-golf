@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class HoleMarker : MonoBehaviour {
 
-  private AudioSource CupAudio;
   private Light HoleMarkerLight;
 
   void Start() {
     GameController.control.NotificationText.text = "";
-    CupAudio = GetComponent<AudioSource>();
     HoleMarkerLight = GetComponent<Light>();
   }
 
@@ -18,9 +16,8 @@ public class HoleMarker : MonoBehaviour {
     if(c.gameObject.tag == "GolfBall") {
       StartCoroutine("CountDown");
       CameraShake.Shake(0.3f, 0.3f);
-      HoleMarkerLight.intensity = 1f;
-      if(!CupAudio.isPlaying)
-        CupAudio.Play();
+      SoundEffectsManager.soundControl.BallGoesInCup();
+      HoleMarkerLight.intensity = 3f;
     }
 
   }
